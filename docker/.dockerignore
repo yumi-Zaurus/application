@@ -1,0 +1,25 @@
+# コメント
+# */temp*   - root以下のあらゆるサブディレクトリ内で、tempで始まる名前のファイルやディレクトリを除外。例えば、テキストファイル /somedir/temporary.txt を除外し、同様に /somedir/temp も除外する
+# */*/temp* - rootから２階層以下のサブディレクトリ内で、tempd始まる名前のファイルやディレクトリを除外。例えば、 /somedir/subdir/temporary.txt を除外。
+# temp?     - ルートディレクトリ内で、tempと１文字が一致する名前のファイルやディレクトリを除外。例えば、/tempa と /tempb を除外。
+
+# *.md
+# !README.md
+# ->コンテクストからREADME.mdを例外として除き、その他すべてのマークダウンファイルを除外
+
+# *.md
+# !README*.md
+# README-secret.md
+# ->README-secret.md以外のREADMEファイルは例外として除外されないが、その他のマークダウンファイルはコンテクストから除外（多分そういうこと、違うかも）
+
+# *.md
+# README-secret.md
+# !README*.md
+# ->すべてのREADMEファイルが除外されない。
+
+# 1つめのパターンとして、 *xxxxx を設定
+# 以降の行で、 !xxxxx で例外とするパターンを指定
+
+# .dockerignoreファイルで、 Dockerfile と .dockerignore ファイルすら除外できる
+# 除外設定をしても、これらのファイルは構築処理で必要なため、デーモンに送信される
+# しかし、ADD と COPY 命令で、これらのファイルをイメージにコピーしない
