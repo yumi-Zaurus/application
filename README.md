@@ -14,7 +14,7 @@ docker
         -- php.ini
     -- web
     -- db_mysql
- -- src  ・・・Laravelをインストールするディレクトリ
+ (-- src  ・・・Laravelをインストールするディレクトリ)
  -- .dockerignore
 
 ## 各ファイル
