@@ -2,7 +2,7 @@
 <br>
 
 ## 使用技術 <br>
-コンテナ&nbsp;-&nbsp;app(PHP、Composer、Laravel)、web(Apache)、DB(MySQL)
+コンテナ&nbsp;-&nbsp;app(PHP(php:latest)、Composer(composer:latest)、Laravel)、web(Apache(httpd:latest))、DB(MySQL)
 <br>
 
 ## ディレクトリ構成 <br>
