@@ -1,23 +1,25 @@
 # application_docker
+<br>
 
-## 使用技術
+## 使用技術 <br>
 コンテナ - app(PHP、Composer、Laravel)、web(Apache)、DB(MySQL)
+<br>
 
+## ディレクトリ構成 <br>
+docker <br>
+ -- README.md <br>
+ -- docker-compose.yml <br>
+ -- containers <br>
+    -- app <br>
+        -- Dockerfile <br>
+        -- php.ini <br>
+    -- web <br>
+    -- db_mysql <br>
+ (-- src  ・・・Laravelをインストールするディレクトリ) <br>
+ -- .dockerignore <br>
+<br>
 
-## ディレクトリ構成
-docker
- -- README.md
- -- docker-compose.yml
- -- containers
-    -- app
-        -- Dockerfile
-        -- php.ini
-    -- web
-    -- db_mysql
- (-- src  ・・・Laravelをインストールするディレクトリ)
- -- .dockerignore
-
-## 各ファイル
-docker-compose.yml - コンテナたちを束ねる設定のやつ
-Dockerfile - コンテナを立てるための司令書
-.dockerignore - `.gitignore` みたいなやつ
+## 各ファイル <br>
+docker-compose.yml - コンテナたちを束ねる設定のやつ<br>
+Dockerfile - コンテナを立てるための司令書 <br>
+.dockerignore - `.gitignore` みたいなやつ <br>
