@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  db:
+    image: mysql:oracle
+    container_name: db
+    restart: always
+    environment:
+      - MYSQL_DATABASE: ddd
+      - MYSQL_ROOT_PASSWORD:
+      - MYSQL_USER: aaa
+      - MYSQL_PASSWORD: secret
+    ports:
+      - 3306:3306
+
+  web_server:
+    build: ./containers/web_server
+    depends_on:
+      - db
